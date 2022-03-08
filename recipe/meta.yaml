@@ -1,5 +1,5 @@
 {% set name = "robotframework-seleniumtestability" %}
-{% set version = "1.1.0" %}
+{% set version = "2.0.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-seleniumtestability-{{ version }}.tar.gz
-  sha256: 18810869a0c0010cc623aea4bb382afdc9aa6fe8404c35fa58452766d0322735
+  sha256: e7914bd54371386984f756fac175365160ad252aedaa0bef276acb3d9c6072fc
 
 build:
   number: 0
