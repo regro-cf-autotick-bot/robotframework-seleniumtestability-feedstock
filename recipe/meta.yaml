@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-seleniumtestability-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/robotframework-seleniumtestability-{{ version }}.tar.gz
   sha256: 2398489992a8b6cbfb5b6da38b76178c03826eff26a0e1d20f473f284efcc8ae
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - furl
-    - python >=3.6
+    - python >={{ python_min }}
     - robotframework-seleniumlibrary >=4.0.0
     - wrapt
 
@@ -32,6 +32,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/rasjani/robotframework-seleniumtestability
